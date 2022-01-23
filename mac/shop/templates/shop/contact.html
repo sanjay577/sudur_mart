@@ -1,0 +1,42 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} Contact Us - SUDURMART{% endblock %}
+{% block body %}
+<div class="container my-3 text-warning">
+    <h1>Contact Us</h1>
+    <form action="/shop/contact/" method="post">{% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name='name' placeholder="Enter Your Name">
+  </div>
+  <div class="form-group">
+    <label for="name">Email</label>
+    <input type="email" class="form-control" id="email" name='email' placeholder="Enter Your Email">
+  </div>
+
+    <div class="form-group">
+    <label for="name">Phone</label>
+    <input type="tel" class="form-control" id="phone" name='phone' placeholder="Enter Your Phone Number">
+  </div>
+
+
+   <div class="form-group">
+    <label for="desc">How May We Help You?</label>
+    <textarea class="form-control" id="desc" name='desc' rows="3"></textarea>
+  </div>
+        <button type="submit" class="btn btn-warning">Submit</button>
+</form>
+ <br>
+    <br>
+    <br>
+            <p>PAYMENT METHOD</p>
+            <br>
+             <li><span style="font-weight:bold;color:#ffc107;">COD (cash on delivery)</span></li>
+          <br>
+            <li><span style="font-weight:bold;color:#ffc107;">QR_CODE</span></li>
+            <br>
+            <li><span style="font-weight:bold;color:#ffc107;">MOBILE BANKING</span></li>
+            <br>
+
+</div>
+{% endblock %}
